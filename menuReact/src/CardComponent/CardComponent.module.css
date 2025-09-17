@@ -1,0 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Oswald:wght@200..700&family=Oxanium:wght@200..800&family=Permanent+Marker&family=Roboto:ital,wght@0,100..900;1,100..900&family=Savate:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap");
+
+* {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-weight: 500;
+}
+
+p {
+  font-weight: 300;
+}
+
+ul {
+  list-style: none;
+}
+
+.cards {
+  display: flex;
+}
