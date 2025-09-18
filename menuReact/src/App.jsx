@@ -1,5 +1,16 @@
 import { useState } from "react";
 import CardComponent from "./CardComponent/CardComponent";
+import style from "./App.module.css";
+import imageForSpaghetti from "./assets/spaghetti-bolognese.jpg";
+import imageForChickenSoup from "./assets/creamy-chicken-soup.jpeg";
+import imageForMargheritaPizza from "./assets/margherita-pizza.jpg";
+import imageForSushi from "./assets/sushi-mix.jpeg";
+import imageForCaesarSalad from "./assets/caesar-salad.jpg";
+import imageForBrownie from "./assets/brownie-with-ice-cream.jpg";
+import imageForTaco from "./assets/taco-plate.jpg";
+import imageForPancakes from "./assets/pancakes-with-jam.jpg";
+import imageForShrimp from "./assets/shrimp-with-lemon.jpeg";
+import imageForEntrecote from "./assets/entrecote-with-vegetables.png";
 
 function App() {
   const menu = [
@@ -75,10 +86,28 @@ function App() {
     },
   ];
 
+  const images = [
+    imageForSpaghetti,
+    imageForChickenSoup,
+    imageForMargheritaPizza,
+    imageForSushi,
+    imageForCaesarSalad,
+    imageForBrownie,
+    imageForTaco,
+    imageForPancakes,
+    imageForShrimp,
+    imageForEntrecote,
+  ];
+
   return (
     <>
-      <main></main>
-      <CardComponent e={menu} category={menu.category} />
+      <div className={style.gridContainer}>
+        <header className={style.header}></header>
+        <nav className={style.sidebar}></nav>
+        <main className={style.content}>
+          <CardComponent images={images} e={menu} category={menu.category} />
+        </main>
+      </div>
     </>
   );
 }
