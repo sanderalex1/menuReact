@@ -2,8 +2,6 @@ import styles from "./CardComponent.module.css";
 
 function CardComponent(props) {
   const menuList = props.e;
-  const category = props.category;
-  const imagesList = props.images;
 
   const listMenu = menuList.map((e, index) => (
     <li key={e.id} className={styles.menuItem}>
@@ -11,11 +9,7 @@ function CardComponent(props) {
         <h3>{e.title}</h3> <br /> <h1>{e.price}</h1> <br />
         <p>{e.ingredients}</p>
       </div>
-      <img
-        src={imagesList[index]}
-        alt={e.title}
-        className={styles.menuItemImage}
-      />
+      <img src={e.image} alt={e.title} className={styles.menuItemImage} />
     </li>
   ));
 

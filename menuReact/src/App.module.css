@@ -15,13 +15,14 @@
 }
 
 .sidebar {
-  background-color: blue;
+  /* background-color: blue; */
   grid-area: sidebar;
   display: flex;
   justify-self: flex-end;
   position: sticky;
   top: 0;
   align-self: start;
+  margin-right: 2rem;
 }
 
 .content {
