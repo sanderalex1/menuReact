@@ -10,8 +10,36 @@
 }
 
 .header {
-  background-color: red;
+  /* background-color: red; */
   grid-area: header;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  padding: 5px;
+}
+
+.headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  margin-right: 33rem;
+}
+
+.header h1 {
+  font-size: 18px;
+}
+.header p {
+  font-size: 14px;
+  color: hsla(0, 0%, 0%, 0.459);
+}
+
+.header img {
+  height: 8svh;
+  border: 1px solid black;
+  border-radius: 5svh;
 }
 
 .sidebar {

@@ -2,16 +2,6 @@ import { useState } from "react";
 import CardComponent from "./CardComponent/CardComponent";
 import ButtonComponent from "./ButtonComponent/ButtonComponent";
 import style from "./App.module.css";
-import imageForSpaghetti from "./assets/spaghetti-bolognese.jpg";
-import imageForChickenSoup from "./assets/creamy-chicken-soup.jpeg";
-import imageForMargheritaPizza from "./assets/margherita-pizza.jpg";
-import imageForSushi from "./assets/sushi-mix.jpeg";
-import imageForCaesarSalad from "./assets/caesar-salad.jpg";
-import imageForBrownie from "./assets/brownie-with-ice-cream.jpg";
-import imageForTaco from "./assets/taco-plate.jpg";
-import imageForPancakes from "./assets/pancakes-with-jam.jpg";
-import imageForShrimp from "./assets/shrimp-with-lemon.jpeg";
-import imageForEntrecote from "./assets/entrecote-with-vegetables.png";
 
 function App() {
   const menu = [
@@ -21,7 +11,7 @@ function App() {
       price: "159 kr",
       ingredients: "Spaghetti, meat sauce, parmesan",
       category: "Main course",
-      image: imageForSpaghetti,
+      image: "spaghetti-bolognese.jpg",
     },
     {
       id: 2,
@@ -29,7 +19,7 @@ function App() {
       price: "129 kr",
       ingredients: "Chicken, cream, carrots, celery",
       category: "Starter",
-      image: imageForChickenSoup,
+      image: "creamy-chicken-soup.jpeg",
     },
     {
       id: 3,
@@ -37,7 +27,7 @@ function App() {
       price: "169 kr",
       ingredients: "Tomato sauce, mozzarella, basil",
       category: "Main course",
-      image: imageForMargheritaPizza,
+      image: "margherita-pizza.jpg",
     },
     {
       id: 4,
@@ -45,7 +35,7 @@ function App() {
       price: "229 kr",
       ingredients: "Salmon, tuna, shrimp, rice",
       category: "Main course",
-      image: imageForSushi,
+      image: "sushi-mix.jpeg",
     },
     {
       id: 5,
@@ -53,7 +43,7 @@ function App() {
       price: "139 kr",
       ingredients: "Romaine lettuce, chicken, parmesan, dressing",
       category: "Starter",
-      image: imageForCaesarSalad,
+      image: "caesar-salad.jpg",
     },
     {
       id: 6,
@@ -61,7 +51,7 @@ function App() {
       price: "89 kr",
       ingredients: "Brownie, vanilla ice cream, chocolate sauce",
       category: "Dessert",
-      image: imageForBrownie,
+      image: "brownie-with-ice-cream.jpg",
     },
     {
       id: 7,
@@ -69,7 +59,7 @@ function App() {
       price: "199 kr",
       ingredients: "Minced meat, corn, cheese, guacamole",
       category: "Main course",
-      image: imageForTaco,
+      image: "taco-plate.jpg",
     },
     {
       id: 8,
@@ -77,7 +67,7 @@ function App() {
       price: "99 kr",
       ingredients: "Pancakes, strawberry jam, sugar",
       category: "Dessert",
-      image: imageForPancakes,
+      image: "pancakes-with-jam.jpg",
     },
     {
       id: 9,
@@ -85,7 +75,7 @@ function App() {
       price: "149 kr",
       ingredients: "Shrimp, lemon, dill, bread",
       category: "Starter",
-      image: imageForShrimp,
+      image: "shrimp-with-lemon.jpeg",
     },
     {
       id: 10,
@@ -93,7 +83,7 @@ function App() {
       price: "289 kr",
       ingredients: "Entrecôte, asparagus, potatoes, pepper sauce",
       category: "Main course",
-      image: imageForEntrecote,
+      image: "entrecote-with-vegetables.png",
     },
   ];
 
@@ -113,7 +103,13 @@ function App() {
   return (
     <>
       <div className={style.gridContainer}>
-        <header className={style.header}></header>
+        <header className={style.header}>
+          <img src="logo.png" alt="logo" />
+          <div className={style.headerText}>
+            <h1>The Gourmet Table</h1>
+            <p>Kristiansund</p>
+          </div>
+        </header>
         <nav className={style.sidebar}>
           <ButtonComponent
             menuList={menu}
