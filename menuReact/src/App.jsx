@@ -1,6 +1,6 @@
 import { useState } from "react";
-import CardComponent from "./CardComponent/CardComponent";
-import ButtonComponent from "./ButtonComponent/ButtonComponent";
+import CardComponent from "./CardComponent/CardComponent.jsx";
+import NavComponent from "./NavComponent/NavComponent.jsx";
 import style from "./App.module.css";
 
 function App() {
@@ -88,17 +88,6 @@ function App() {
   ];
 
   const [displayedMenu, setDisplayedMenu] = useState(menu);
-  const [activeCategory, setActiveCategory] = useState("All");
-
-  const filterMenu = (category) => {
-    setActiveCategory(category);
-    if (category === "All") {
-      setDisplayedMenu(menu);
-    } else {
-      const filteredItems = menu.filter((item) => item.category === category);
-      setDisplayedMenu(filteredItems);
-    }
-  };
 
   return (
     <>
@@ -111,11 +100,7 @@ function App() {
           </div>
         </header>
         <nav className={style.sidebar}>
-          <ButtonComponent
-            menuList={menu}
-            filterMenu={filterMenu}
-            activeCategory={activeCategory}
-          />
+          <NavComponent />
         </nav>
         <main className={style.content}>
           <CardComponent e={displayedMenu} />

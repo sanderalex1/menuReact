@@ -19,7 +19,6 @@ function ButtonComponent({ menuList, filterMenu, activeCategory }) {
 
   return (
     <div className={styles.categories}>
-      <input type="text" />
       <button
         onClick={() => {
           filterMenu("All");
